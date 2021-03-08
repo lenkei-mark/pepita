@@ -98,7 +98,13 @@
 
     .nav-bar{
         @include nav-bar($laptop-font-size-small, $laptop-font-size-large)
-    }  
+    } 
+    
+    .people{
+        input{
+            max-width: 6%;
+        }
+    }
 }
 
 @import "../node_modules/bootstrap/scss/bootstrap";

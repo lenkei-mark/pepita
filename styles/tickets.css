@@ -172,6 +172,10 @@
     height: 2px;
     background-color: black;
   }
+
+  .people input {
+    max-width: 6%;
+  }
 }
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
