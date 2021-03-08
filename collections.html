@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLLECTIONS</title>
+    <link rel="stylesheet" href="./styles/collections.css">
+    <script src="./js/menu.js"></script>
+    <script src="./js/collections.js"></script>
+</head>
+<body>
+    <div id="modal">
+        <h1>Modal</h1>
+        <button onclick="closeModal()">Close</button>
+    </div>
+    <div id="menu">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <img src="./images/searchMenu.svg">
+                <input type="text" placeholder="Search">
+            </li>
+            <li class="nav-item">
+                <img src="./images/exhibitionsMenu.svg">
+                <a href="#" onclick="openModal()">Exhibitions & Events</a>
+            </li>
+            <li class="nav-item">
+                <img src="./images/artistsMenu.svg">
+                <a href="#" onclick="openModal()">Artists & Artworks</a>
+            </li>
+            <li class="nav-item">
+                <img src="./images/collectionsMenu.svg">
+                <a href="./collections.html">Collections</a>
+            </li>
+            <li class="nav-item">
+                <img src="./images/planVisitMenu.svg">
+                <a href="./tickets.html">Plan Your Visit</a>
+            </li>
+            <li class="nav-item">
+                <img src="./images/becomeMemberMenu.svg">
+                <a href="#" onclick="openModal()">Become a Member</a>
+            </li>
+            <li class="nav-item">
+                <img src="./images/shopMenu.svg">
+                <a href="#" onclick="openModal()">Shop</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main">
+        <div class="nav-bar">
+                <div class="logo">
+                    <p class="no-m-p">THE</p>
+                    <p class="no-m-p">ART</p>
+                    <p class="no-m-p">MUSEUM</p>
+                </div>
+                <div class="align-self-center">
+                    <p class="page-indicator">Collections</p>
+                </div>
+                <div id="hamburger" onclick="openMenu()">
+                    <div class="hamburger-icon"></div>
+                    <div class="hamburger-icon"></div>
+                    <div class="hamburger-icon"></div>
+                </div>
+        </div>
+        <div class="search-bar">
+            <input id="search-bar" type="text" placeholder="Explore the Collection">
+            <ul id="search-dummy">
+                <li>Cubism</li>
+                <li>Minimalism</li>
+                <li>Picasso</li>
+            </ul>
+            <p>Advanced search</p>
+        </div>
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col">
+                    <img src="images/img1.png">
+                    <p>DECORATIVE ARTS & CRAFTS</p>
+                </div>
+                <div class="col">
+                    <img src="images/img2.png">
+                    <p>AMERICAN IMPRESSIONISM</p>
+                </div>
+                <div class="col">
+                    <img src="images/img3.png">
+                    <p>DE STIJL</p>
+                </div>
+                <div class="col">
+                    <img src="images/img4.png">
+                    <p>CUBISM</p>
+                </div>
+                <div class="col">
+                    <img src="images/img5.png">
+                    <p>AMERICAN PHOTOGRAPHY</p>
+                </div>
+                <div class="col">
+                    <img src="images/img6.png">
+                    <p>GREEK ANTIQUITES</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

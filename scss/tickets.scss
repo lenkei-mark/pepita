@@ -1,0 +1,104 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+*{
+    font-family: $font;
+    margin-top: 5px;
+    font-weight: $basic-font-weight;
+}
+
+.no-m-p{
+    margin:0;
+    padding:0;
+}
+
+@media only screen and (min-width: 0px){
+
+    #menu{
+        @include menu
+    }
+
+    #modal{
+        @include modal
+    }
+
+    .nav-bar{
+        @include nav-bar($mobile-font-size-small, $mobile-font-size-large)
+    }
+
+    .ad-text{
+        width: 90%;
+        margin: auto;
+        h2{
+            font-size: 24px;
+            font-weight: $basic-font-weight;
+        }
+
+        p{
+            color: $colorOrange;
+        }
+    }
+
+    .date-picker{
+        width: 90%;
+        margin: auto;
+        .dates{
+            display: flex;
+            justify-content: space-between;
+            font-size: $mobile-font-size-large;
+            h4{
+                font-weight: $basic-font-weight;
+            }
+        }
+        p{
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+
+    .people{
+        font-size: $mobile-font-size-large;
+        .note{
+            font-size: 12px;
+        }
+        input{
+            max-width: 15%;
+        }
+        button{
+            background: none;
+            border: 1px solid $colorGrey;
+            color: $colorGrey;
+        }
+    }
+
+    .checkout{
+        font-size: $mobile-font-size-large;
+
+        button{
+            background-color: $colorOrange;
+            color: white;
+            border: none;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            width: 90%;
+            height: 150%;
+            font-size: $mobile-font-size-medium;
+        }
+
+        hr{
+            border: 2px solid $colorOrange;
+        }
+    }
+
+    .no-focus{
+        color: $colorGrey;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+
+    .nav-bar{
+        @include nav-bar($laptop-font-size-small, $laptop-font-size-large)
+    }  
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";

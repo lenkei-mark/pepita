@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKETS</title>
+    <link rel="stylesheet" href="./styles/tickets.css">
+    <script src="./js/menu.js"></script>
+    <script src="./js/tickets.js"></script>
+</head>
+<body>
+    <div id="modal">
+        <h1>Modal</h1>
+        <button onclick="closeModal()">Close</button>
+    </div>
+    <div id="menu">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <img src="./images/searchMenu.svg">
+                <input type="text" placeholder="Search">
+            </li>
+            <li class="nav-item">
+                <img src="./images/exhibitionsMenu.svg">
+                <a href="#" onclick="openModal()">Exhibitions & Events</a>
+            </li>
+            <li class="nav-item">
+                <img src="./images/artistsMenu.svg">
+                <a href="#" onclick="openModal()">Artists & Artworks</a>
+            </li>
+            <li class="nav-item">
+                <img src="./images/collectionsMenu.svg">
+                <a href="./collections.html">Collections</a>
+            </li>
+            <li class="nav-item">
+                <img src="./images/planVisitMenu.svg">
+                <a href="./tickets.html">Plan Your Visit</a>
+            </li>
+            <li class="nav-item">
+                <img src="./images/becomeMemberMenu.svg">
+                <a href="#" onclick="openModal()">Become a Member</a>
+            </li>
+            <li class="nav-item">
+                <img src="./images/shopMenu.svg">
+                <a href="#" onclick="openModal()">Shop</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main">
+        <div class="nav-bar">
+            <div class="logo">
+                <p class="no-m-p">THE</p>
+                <p class="no-m-p">ART</p>
+                <p class="no-m-p">MUSEUM</p>
+            </div>
+            <div class="align-self-center">
+                <p>Plan Your Visit</p>
+            </div>
+            <div id="hamburger" onclick="openMenu()">
+                <div class="hamburger-icon"></div>
+                <div class="hamburger-icon"></div>
+                <div class="hamburger-icon"></div>
+            </div>
+        </div>
+
+        <div class="ad-text">
+            <h2 class="no-m-p">Skip the Line.</h2>
+            <h2 class="no-m-p">Purchase Tickets.</h2>
+            <p class="no-m-p">All exhibitions, audio tours and films</p>
+            <p class="no-m-p">included in the price of admission.</p>
+        </div>
+
+        <div class="date-picker pt-4">
+            <div class="dates">
+                <h4 class="no-focus">Today</h4>
+                <h4>Tomorrow</h4>
+                <h4 class="no-focus">Other</h4>
+            </div>
+            <hr class="m-0">
+            <p class="m-0">March 22, 2016</p>
+            <p class="m-0">Open 10:30am-5:30pm</p>
+        </div>
+
+        <div class="people">
+            <div class="container">
+                <div class="row">
+                    <div class="col">Adults</div>
+                    <div class="col-8 text-right">
+                        <button onclick="decrease('adults')">-</button>
+                        <input type="number" onchange="checkValue(this)" id="adults" placeholder="0">
+                        <button onclick="increase('adults')">+</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="m-0">Seniors</p>
+                        <p class="m-0 note no-focus">65+ with ID</p>
+                    </div>
+                    <div class="col-8 text-right">
+                        <button onclick="decrease('seniors')">-</button>
+                        <input type="number" onchange="checkValue(this)" id="seniors" placeholder="0">
+                        <button onclick="increase('seniors')">+</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="m-0">Students</p>
+                        <p class="m-0 note no-focus">with ID</p>
+                    </div>
+                    <div class="col-8 text-right">
+                        <button onclick="decrease('students')">-</button>
+                        <input type="number" onchange="checkValue(this)" id="students" placeholder="0">
+                        <button onclick="increase('students')">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout pt-5">
+            <hr>
+            <div class="container">
+                <div class="row">
+                    <div class="col">Total</div>
+                    <div class="col text-right">$16</div>
+                </div>
+                <div class="row text-center">
+                    <div class="col"><button>Continue to Payment</button></div>
+                </div>
+            </div>
+        </div>
+
+    </div#>
+</body>
+</html>

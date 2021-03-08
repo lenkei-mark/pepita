@@ -1,0 +1,85 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+*{
+    font-family: $font;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.no-m-p{
+    margin:0;
+    padding:0;
+}
+
+@media only screen and (min-width: 0px){
+
+    #menu{
+        @include menu
+    }
+
+    #modal{
+        @include modal
+    }
+
+    .nav-bar{
+        @include nav-bar($mobile-font-size-small, $mobile-font-size-large)
+    }
+    
+    .search-bar{
+        @include search-bar($mobile-font-size-medium, 98%);
+        ul{
+            display: none;
+            list-style: none;
+            background-color: $colorGrey;
+        }
+    }
+    
+    .container{
+        color: $colorOrange;
+        font-size:$mobile-font-size-medium;
+    }
+    
+    img{
+        max-width: 100%;
+    }
+
+    .col{
+        min-width: 50%;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .col{
+        min-width: 33%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .nav-bar{
+        @include nav-bar($laptop-font-size-small, $laptop-font-size-large)
+    }
+
+    .search-bar{  
+        @include search-bar($laptop-font-size-medium, 99%)
+    }
+
+    .container{
+        color: $colorOrange;
+        font-size:$laptop-font-size-medium;
+    }   
+}
+
+@media only screen and (min-width: 1440px) {
+    .col{
+        min-width: 10%;
+    }
+}
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
